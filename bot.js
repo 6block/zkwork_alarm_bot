@@ -54,8 +54,8 @@ async function processAddresses() {
     }
 }
 
-// 每31分钟执行一次
-schedule.scheduleJob('*/31 * * * *', processAddresses);
+// 每60*24=1440分钟执行一次
+schedule.scheduleJob('*/1440 * * * *', processAddresses);
 
 // 启动时立即执行一次
 processAddresses();
